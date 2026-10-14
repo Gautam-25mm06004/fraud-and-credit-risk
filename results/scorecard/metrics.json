@@ -1,0 +1,72 @@
+{
+  "n": 1000,
+  "bad_rate": 0.3,
+  "excluded_attributes": [
+    "personal_status_sex",
+    "foreign_worker"
+  ],
+  "models": {
+    "WOE scorecard (logistic)": {
+      "auc_mean": 0.7784380952380953,
+      "auc_std": 0.026099003030454492,
+      "gini_mean": 0.5568761904761905,
+      "ks_mean": 0.477047619047619,
+      "expected_cost_per_loan": 0.5304
+    },
+    "HistGradientBoosting": {
+      "auc_mean": 0.7863999999999999,
+      "auc_std": 0.029425147743518478,
+      "gini_mean": 0.5727999999999998,
+      "ks_mean": 0.47990476190476195,
+      "expected_cost_per_loan": 0.5472
+    }
+  },
+  "cost_reject_everyone": 0.7,
+  "cost_accept_everyone": 1.5,
+  "information_value": {
+    "status": 0.659,
+    "credit_history": 0.291,
+    "duration": 0.215,
+    "savings": 0.188,
+    "purpose": 0.164,
+    "property": 0.112,
+    "amount": 0.095,
+    "age": 0.089,
+    "housing": 0.086,
+    "employment_duration": 0.086,
+    "other_installment_plans": 0.058,
+    "other_debtors": 0.031,
+    "installment_rate": 0.025,
+    "number_credits": 0.012,
+    "job": 0.009,
+    "telephone": 0.006,
+    "present_residence": 0.003,
+    "people_liable": 0.0
+  },
+  "features_kept_iv_ge_0.02": [
+    "status",
+    "duration",
+    "credit_history",
+    "purpose",
+    "amount",
+    "savings",
+    "employment_duration",
+    "installment_rate",
+    "other_debtors",
+    "property",
+    "age",
+    "other_installment_plans",
+    "housing"
+  ],
+  "score_range": [
+    424.6247906074212,
+    623.8222113108827
+  ],
+  "bad_rate_by_score_quintile": {
+    "lowest": 0.655,
+    "low": 0.465,
+    "mid": 0.24,
+    "high": 0.1,
+    "highest": 0.04
+  }
+}

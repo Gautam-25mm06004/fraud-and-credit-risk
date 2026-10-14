@@ -1,0 +1,74 @@
+{
+  "n": 284807,
+  "n_fraud": 492,
+  "review_cost": 5.0,
+  "split": {
+    "train": {
+      "n": 170884,
+      "fraud": 360
+    },
+    "val": {
+      "n": 56961,
+      "fraud": 57
+    },
+    "test": {
+      "n": 56962,
+      "fraud": 75
+    }
+  },
+  "models": {
+    "LogisticRegression": {
+      "out_of_time": {
+        "pr_auc": 0.688429711153393,
+        "roc_auc": 0.975861620405365,
+        "precision_at_top_0.1pct": 0.7321428571428571,
+        "recall_at_top_0.1pct": 0.5466666666666666
+      },
+      "threshold_cost_optimal": 0.07577693572682012,
+      "test_cost_at_cost_optimal_threshold": 3468.3599999999997,
+      "test_cost_at_0.5": 5388.469999999999,
+      "alerts_at_cost_optimal": 94,
+      "frauds_caught_at_cost_optimal": 55,
+      "fraud_amount_caught_pct": 61.20767059201009,
+      "brier_out_of_time": 0.0006781613786681575,
+      "random_split": {
+        "pr_auc": 0.7236873657903881,
+        "roc_auc": 0.9702239787304905,
+        "precision_at_top_0.1pct": 0.8571428571428571,
+        "recall_at_top_0.1pct": 0.4897959183673469
+      }
+    },
+    "HistGradientBoosting": {
+      "out_of_time": {
+        "pr_auc": 0.8019163678903216,
+        "roc_auc": 0.9850203620042073,
+        "precision_at_top_0.1pct": 0.9107142857142857,
+        "recall_at_top_0.1pct": 0.68
+      },
+      "threshold_cost_optimal": 0.05220895474211179,
+      "test_cost_at_cost_optimal_threshold": 2770.91,
+      "test_cost_at_0.5": 3038.0499999999997,
+      "alerts_at_cost_optimal": 73,
+      "frauds_caught_at_cost_optimal": 57,
+      "fraud_amount_caught_pct": 68.87269932697309,
+      "brier_out_of_time": 0.00043972915930931105,
+      "random_split": {
+        "pr_auc": 0.8041515682157707,
+        "roc_auc": 0.9738803934629563,
+        "precision_at_top_0.1pct": 0.9642857142857143,
+        "recall_at_top_0.1pct": 0.5510204081632653
+      }
+    }
+  },
+  "test_cost_no_model": 7729.26,
+  "undersampling": {
+    "beta": 0.02,
+    "train_rows": 3705,
+    "brier_raw": 0.0013012061147229278,
+    "brier_corrected": 0.00040858883909184157,
+    "mean_pred_raw": 0.004140412249903173,
+    "mean_pred_corrected": 0.0011358281981029017,
+    "test_fraud_rate": 0.001316667251852112,
+    "pr_auc": 0.7978781033014175
+  }
+}
